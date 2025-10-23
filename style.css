@@ -37,4 +37,41 @@
       color: #fff;
        font-family:'Courier New', Courier, monospace
     }
+
+    .centrado{
+      text-align: center;
+      background-color: #004d66;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    fieldset {
+      width: 400px;
+      height: 550px;
+      padding: 35px;
+      box-shadow: 5px 10px 10px rgb(123, 171, 197);
+      border: #02060f;
+      /*background-color: #37793b;*/
+      background-color: #e1e8eb;
+      border-radius: 10px;
+      border: 3px solid #6316165e;
+    }
+
+    form{
+      font-family: Geneva, Tahoma, sans-serif;
+      background-color: #004d66;
+    }
+
+    input{
+      border: 1px solid #631616b4;
+    }
+
+    label{
+      display: block;
+      color: #1b5e20;
+      font-weight: bold;
+
+    }
+ 
  
