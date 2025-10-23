@@ -27,6 +27,37 @@
       <a href="./pagina3.html">Formularios</a>
     </nav>
     </div>
-    <h1>PAGINA3</h1>
+    <h1 class="centrado">CONTACTO</h1>
+    <p>
+      En Cabañas Miranda queremos que tu experiencia sea inolvidable. Si tenes dudas, queres hacer una reserva o necesitás mas información, completa
+      el formulario y te responderemos a la brevedad. ¡Estamos felices de ayudarte a planear tu descanso ideal!
+    </p>
+
+
+  <form action="">
+    <fieldset>
+      <label for="Nombre">Nombre:</label>
+      <input type="text" name="Nombre" id="Nombre" maxlength="25" required><br> <br>
+      <label for="Apellido">Apellido:</label>
+      <input type="text" name="Apellido" id="Apellido" maxlength="25" required><br> <br>
+      <label for="email">Correo electronico:</label>
+      <input type="email" name="email" id="email" required> <br><br>
+      <label for="Telefono">Telefono:</label>
+      <input type="tel" name="Telefono" id="Telefono" ><br> <br>
+      <label for="FechaLlegada">Fecha de llegada:</label>
+      <input type="date" id="FechaLlegada" name="FechaLlegada" min="2025-11-01"> <br><br>
+      <label for="FechaSalida">Fecha de salida:</label>
+      <input type="date" id="FechaSalida" name="FechaSalida" max="2027-11-01"> <br><br>
+      <label for="Cantidad">Cantidad de personas:</label>
+      <input type="number" name="Cantidad" id="Cantidad" max="6"> <br><br>
+      <label for="mensaje">Mensaje:</label> <br>
+      <textarea name="mensaje" id="mensaje" minlength="10" maxlength="100"></textarea> <br><br>
+      <input type="submit" value="Enviar">
+    </fieldset>
+
+  </form>
+  
+
+
 </body>
 </html>
