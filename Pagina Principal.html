@@ -3,36 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CABAÑAS MIRANDA</title>
 
     <link rel="stylesheet" href="style.css">
 
-<body>
-    <div>
-         <div class="logo">
-       <!-- Menu -->
+    <style>
+      .imagen {
+          float:right;
+          margin-left: 20px;  
+      }
 
-      <img src="./cabañaM.jpeg" width="150" alt="150">
-      CABAÑAS MIRANDA
-      <small>Tu refugio en la naturaleza, tu escape a la serenidad</small>
+      .refugio{    
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+      }
       
+      .comoLlegar{  
+          flex-direction: column;
+          margin-left: 460px;
+          font-size: 15px;  
+          background-color: rgb(36, 138, 228);
+          border: 2px solid black;
+      }
+
+      .atractivos{  
+          flex-direction: column;
+          font-size: 15px;
+          background-color: aliceblue;
+          border: 2px solid black;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      ::marker { /*puntos de lista en rojo*/
+          color: red;
+          font-size: 23px;
+      }
+      .mapa{
+          float: left;
+          flex-direction: column;
+          font-size: 15px;
+          background-color: aliceblue;
+          border: 2px solid black;
+          width: 40;
+          height: 40;
+      }  
+    
+    .contenedor2{    
+      background-color: rgb(6, 6, 20);
+      margin-right:100px ;  
+    }
+    .telefono{
+      flex-direction:column ;
+      align-items: center;
+    }
+    .mail{
+      flex-direction:column ;
+      align-items: center;
+    }
+    .redes{
+      flex-direction:column ;
+      align-items: center;
+    }
+  
+    </style>
+<body>
+    <div class="contenedor">
+      <div class="logo">
+      <img src="./cabañaM(modificado).jpeg" width="70" alt="70">
+      <small>CABAÑAS MIRANDA</small>
+      <small style="color: #18501d;">Tu refugio en la naturaleza</small>
       </div>
+
     <nav>
       <a href="./nuevo.html">Inicio</a>
-      <a href="./pagina2.html">Productos</a>
-      <a href="#">Galería</a>
+      <a href="./pagina2.html">Servicios</a>
+      <a href="#GALERIA">Galería</a>
       <a href="./pagina3.html">Formularios</a>
-      <a href="#info">Quienes Somos</a>
+      <a href="#UBICACION">Ubicación</a>
+      <a href="#CONTACTO">Contacto</a>
     </nav>
+    <div class="bandera">
+    <img src="./bandera argentina2.avif" width="25px" height="25px">
+     <small>BIENVENIDOS</small>
     </div>
+    </div>
+<!---->
+    <hr><!--linea horizontal-->
 
-
-    <p>
+       <h2 >Un Refugio en la Naturaleza</h2>
+    
+     <img src="./cabañas3.jpg" width="300" height="300" class="imagen" >
+<div class="refugio"> 
         Disfrutar de la naturaleza con comodidad es posible. Las cabañas ofrecen una experiencia única para quienes buscan descanso, aire puro y tranquilidad. Rodeadas de paisajes naturales, son el alojamiento ideal tanto para escapadas en pareja como para vacaciones en familia o con amigos.
 Alquilar una cabaña permite combinar la calidez de un hogar con la aventura de estar en contacto directo con el entorno: montañas, ríos, bosques y cielos estrellados. Además, cada cabaña cuenta con los servicios necesarios para una estadía confortable y segura.
 Ya sea para relajarse, desconectarse o explorar, las cabañas son la opción perfecta para quienes desean vivir una estadía auténtica, en armonía con la naturaleza.
-    </p>
+   </div>
 
+    <hr><!--linea horizontal-->
+    
+    <h2 id="UBICACION" style="text-align: center;">Ubicación</h2>
+    <h4 style="text-align: center;">Encuéntranos en el corazón de la naturaleza</h4>
 
+  <section class="ubi">
+  <!--Mapa-->
+  <div class="mapa">
+    <img src="ubicacion-maps.png" width="400" height="390">
+  </div>
+
+<div class="comoLlegar">
+    <h3 >Cómo Llegar</h3>
+    <p>Desde la ciudad principal, toma la Ruta Nacional hacia el norte durante aproximadamente 45 minutos. Luego gira a la derecha en el Camino Rural señalizado <strong>"Cabañas Miranda"</strong>.
+Nuestras cabañas están ubicadas en un entorno natural privilegiado, rodeadas de bosques y con acceso a lagos y senderos de montaña.</p>
+</div>
+
+     <div class="atractivos">
+      <h3>Atractivos Cercanos</h3><br>
+      <ul>
+        <li>Parque Nacional (15 min)</li>
+        <li>Cascadas del Valle (20 min)</li>
+        <li>Mirador Panorámico (10 min)</li>
+        <li>Pueblo Artesanal (30 min)</li>
+      </ul>
+    </div>
+    </section><br>
+
+    <img src="./ubicacion.png" width="20" height="20" > <span style="color: red;"  > Dirección</span>
+
+     <p>Camino Rural Km 12, Región Natural</p>
+     <hr><!--linea horizontal-->
+  
+
+     <h2 id="CONTACTO" style="text-align: center;">Contacto</h2>
+     <h4 style="text-align: center;">Estamos aquí para ayudarte. Contáctanos por cualquiera de estos medios</h4>
+
+  <div class="contenedor2">
+  <!--telefono-->
+  <div class="telefono">
+    <img src="./tel.png" width="100" height="100" alt="Teléfono">
+    <h3>Teléfono</h3>
+    +54 2664-123456<br>
+    Lun - Dom: 8:00 - 22:00
+  </div>
+
+  <!--mail-->
+  <div class="mail">
+    
+      <img src="./mail.png" width="100" height="100" alt="Email">
+    <h3>Email</h3>
+    <span style="color: black" >info@cabanasmiranda.com</span>
+    Respuesta en 24 horas
+  </div>
+
+  <!--redes sociales-->
+  <div class="redes">
+      <img src="./insta.png" width="100" height="100" alt="Redes Sociales">
+    <h3>Redes Sociales</h3>
+    Cabañas.Miranda
+  </div>
+</div>
+     
 </body>
 </html>
