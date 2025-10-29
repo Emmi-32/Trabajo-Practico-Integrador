@@ -1,15 +1,18 @@
   body {
-         background-color: #004d66;
+         background-color: #2698be;
          margin: 20 px;
          font-family: 'Arial', sans-serif;
     }
     .logo {
       display: flex;
       flex-direction: column;
-      font-size: 20px;
-      color: #043bb3;
+      color: rgb(70, 13, 13);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    
+    .logo img{
+      padding-left: 15%;
+    }
+
     div {
       display: flex;
       justify-content: space-between;
@@ -21,23 +24,43 @@
     nav {
       display: flex;
       align-items: center;
-       gap: 25px; /*distancia entre items*/
+      gap: 25px; /*distancia entre items*/
+      padding-right: 15%;
        
     }
     nav a {
-      
-      color: #da0b0b;
+      color: #18501d;
       font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
     }
 
     nav a:hover {
-      color: #e4f30b;
+      color: #c51408;
     }
+
     p{
       color: #fff;
        font-family:'Courier New', Courier, monospace
     }
 
+    .contenedor{
+      position: sticky; /*movible accesos directos,simil fixed*/
+      top: 0; 
+      height: 110px;
+      width: 94%;
+    }
+
+    h2{
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 40px;
+       text-align: center;
+    }
+
+    h4{
+       font-size: 20px;
+       color: aliceblue;
+       text-align: center;
+    }
 
     .centrado{
       text-align: center;
