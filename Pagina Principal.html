@@ -91,7 +91,7 @@
 
        <h2 >Un Refugio en la Naturaleza</h2>
     
-     <img src="./cabañas3.jpg" width="300" height="300" class="imagen" >
+     <img src="./cabañas4.jpg" width="300" height="300" class="imagen" >
 <div class="refugio"> 
         Disfrutar de la naturaleza con comodidad es posible. Las cabañas ofrecen una experiencia única para quienes buscan descanso, aire puro y tranquilidad. Rodeadas de paisajes naturales, son el alojamiento ideal tanto para escapadas en pareja como para vacaciones en familia o con amigos.
 Alquilar una cabaña permite combinar la calidez de un hogar con la aventura de estar en contacto directo con el entorno: montañas, ríos, bosques y cielos estrellados. Además, cada cabaña cuenta con los servicios necesarios para una estadía confortable y segura.
@@ -99,7 +99,60 @@ Ya sea para relajarse, desconectarse o explorar, las cabañas son la opción per
    </div>
 
     <hr><!--linea horizontal-->
-    
+
+    <h2 id="GALERIA" style="text-align: center;">Galería</h2>
+    <h4 style="text-align: center;">Desconecta del mundo y reconecta con la naturaleza en nuestro refugio de tranquilidad</h4>
+    <div class="carrusel">
+      <button id="anterior" ><img src="./boton-IZQ.png" width="20" height="100"></button>
+      <img id="fotos" width="700" height="300">
+      <button id="posterior"><img src="./boton-DERECHA.png" width="20" height="100"></button>
+    </div>
+
+  <script>
+    const imagenes = [
+      "./fotos/cabaña1.png",
+      "./fotos/cabaña2.png",
+      "./fotos/cabaña3.png",
+      "./fotos/cabaña4.png",
+      "./fotos/cabaña5.png",
+    ];
+
+// indice actual del carrusel
+let i= 0;
+
+// DOM
+const imagen = document.getElementById("fotos");
+const atras = document.getElementById("anterior");
+const  adelante= document.getElementById("posterior");
+
+//primera imagen al cargar
+imagen.src = imagenes[i];
+
+function mostrarImagen() {
+  imagen.src = imagenes[i];
+}
+
+adelante.addEventListener('click', posterior);
+function posterior() {
+  i++;
+  if (i >= imagenes.length) {
+    i = 0;
+  }
+  mostrarImagen();
+}
+
+atras.addEventListener('click',anterior);
+function anterior() {
+  i--;
+  if (i < 0) {
+    i = imagenes.length - 1;
+  }
+  mostrarImagen();
+}
+  </script>
+
+<hr><!--linea horizontal-->
+     
     <h2 id="UBICACION" style="text-align: center;">Ubicación</h2>
     <h4 style="text-align: center;">Encuéntranos en el corazón de la naturaleza</h4>
 
