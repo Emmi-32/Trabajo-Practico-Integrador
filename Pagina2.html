@@ -45,6 +45,23 @@
         box-shadow: 2px 2px 0 rgb(15, 15, 14);
     }
 
+       .servicios{
+      display: flex;
+      flex-wrap: wrap;/* Permite que los elementos pasen a la siguiente linea */
+      width: 90%; 
+      height: 550px;
+      background-color: #004d66;
+    }
+    .servicios div {
+      background-color: #f1f1f1;
+      margin: 30px;
+      padding: 30px;
+       width: 150px; 
+      height: 150px;
+      flex-direction: column;
+      align-items: center;
+    }
+
 
     </style>
 </head>
@@ -126,5 +143,52 @@
   </div>
   </div> 
   <hr><!--linea horizontal-->
+
+  <h2>Servicios</h2>
+  <h4>Todo lo que necesitas para una estadía perfecta</h4>
+
+  <div class="servicios">
+    <div >
+        <img src="./fotos-servicios/wifi.png" width="50" height="50" >
+        <h3>Wi-Fi Gratuito</h3>
+        <h5>Conexión en todas las cabañas</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/estacionamiento.png" width="50" height="50" >
+      <h3>Estacionamiento</h3>
+      <h5>Espacio privado y seguro</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/fogata.png" width="50" height="50" >
+      <h3>Área de Fogatas</h3>
+      <h5>Disfruta de noches estrelladas</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/senderismo.png" width="50" height="50" >
+      <h3>Senderos</h3>
+      <h5>Rutas de senderismo señalizadas</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/parrilla.png" width="50" height="50" >
+      <h3>Parrillas</h3>
+      <h5>Área de parrillas equipadas</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/piscina.png" width="50" height="50" >
+      <h3>Piscina</h3>
+      <h5>Piscina climatizada</h5>
+    </div>
+    <div>
+      <img src="./fotos-servicios/juegos.png" width="50" height="50" >
+      <h3>Juegos</h3>
+      <h5>Área recreativa para niños</h5>
+    </div>
+     <div>
+      <img src="./fotos-servicios/kayaks.png" width="50" height="50" >
+      <h3>Kayaks</h3>
+      <h5>Disponible para el lago</h5>
+     </div>
+  </div>
+  
 </body>
 </html>
