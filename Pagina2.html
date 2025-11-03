@@ -6,6 +6,47 @@
     <title>Document</title>
      <link rel="stylesheet" href="style.css">
 
+     <style>
+       .contenedor3{    
+      background-color:gainsboro;
+      margin-right:100px ;  
+    }
+      .cabaña1{
+      flex-direction:column ;
+      align-items: center;
+    }
+    .cabaña2{
+      flex-direction:column ;
+      align-items: center;
+    }
+    .cabaña3{
+      flex-direction:column ;
+      align-items: center;
+    }
+
+    ::marker { /*puntos de lista en rojo*/
+          color: red;
+          font-size: 23px;
+    }
+    li{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 20px;
+      color: lightslategray;
+    }
+
+    .reservar a{
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: 1px black;
+        cursor: pointer;
+        text-decoration: none; 
+        border-radius: 5px;
+        box-shadow: 2px 2px 0 rgb(15, 15, 14);
+    }
+
+
+    </style>
 </head>
 <body>
      <div class="contenedor">
@@ -18,7 +59,7 @@
     <nav>
       <a href="./Pagina Principal.html">Inicio</a>
       <a href="./pagina2.html">Servicios</a>
-      <a href="#GALERIA">Galería</a>
+      <a href="./Pagina Principal.html #GALERIA">Galería</a>
       <a href="./pagina3.html">Formularios</a>
       <a href="./Pagina Principal.html #UBICACION">Ubicación</a>
       <a href="./Pagina Principal.html #CONTACTO">Contacto</a>
@@ -31,5 +72,59 @@
 <!---->
     <hr><!--linea horizontal-->
  
+    <h2>Nuestras Cabañas</h2>
+    <h4 >Cada cabaña está cuidadosamente diseñada para ofrecerte una experiencia única de<br> confort y conexión con la naturaleza</h2>
+
+     
+  <div class="contenedor3">
+  
+  <div class="cabaña1">
+    <img src="./fotos/cabaña1.png" width="300" height="300" alt="cabaña1">
+    <h3><b>Cabaña de Bosque</b></h3>
+    <h5>2-4 personas</h5>
+    <ul>
+      <li>2 Habitaciones</li>
+      <li>Cocina equipada</li>  
+      <li>Terraza privada</li>  
+      <li>Vista al bosque</li>  
+    </ul>
+     <div class="reservar">
+      <a href="./pagina3.html" >Reservar</a>
+     </div>
+    
+  </div>
+
+  <div class="cabaña2">
+    
+      <img src="./fotos/cabaña2.png" width="300" height="300" alt="cabaña2">
+    <h3><b>Cabaña del Lago</b></h3>
+    <h5>4-6 personas</h5>
+    <ul>
+      <li>3 Habitaciones</li>
+      <li>Cocina completa</li>  
+      <li>Deck con parrilla</li>  
+      <li>Vista al lago</li>  
+    </ul>
+      <div class="reservar">
+      <a href="./pagina3.html" >Reservar</a>
+       </div>
+  </div>
+
+  <div class="cabaña3">
+      <img src="./fotos/cabaña5.png" width="300" height="300" alt="cabaña3">
+    <h3><b>Cabaña de la Montaña</b></h3>
+    <h5>2-3 personas</h5>
+    <ul>
+      <li>1 Habitaciones</li>
+      <li>Cocina pequeña</li>  
+      <li>Balcón panorámico</li>  
+      <li>Vista a la montaña</li>  
+    </ul>
+    <div class="reservar">
+      <a href="./pagina3.html" >Reservar</a>
+    </div>
+  </div>
+  </div> 
+  <hr><!--linea horizontal-->
 </body>
 </html>
