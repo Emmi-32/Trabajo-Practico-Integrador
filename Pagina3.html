@@ -47,6 +47,16 @@
       color: white;
       padding: 5px 10px
     }
+
+    #resultado {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgb(243, 233, 233);
+      border-radius: 10px;
+      box-shadow: 5px 5px 0px #000000;
+      font-family: 'Lucida Sans';
+      font-size: 160%;
+      }
     </style>
 </head>
 <body>
@@ -78,32 +88,119 @@
       el formulario y te responderemos a la brevedad. ¡Estamos felices de ayudarte a planear tu descanso ideal!
     </h4>
 
-
-  <form action="">
+    <form class="formulario" id="formulario" name="formulario" novalidate onsubmit="return validarFormulario()">
     <fieldset>
       <legend>Reserva tu estadía</legend>
-      <label for="Nombre">Nombre:</label>
-      <input type="text" name="Nombre" id="Nombre" maxlength="25" required><br> <br>
-      <label for="Apellido">Apellido:</label>
-      <input type="text" name="Apellido" id="Apellido" maxlength="25" required><br> <br>
-      <label for="email">Correo electronico:</label>
+      <label for="Nombre">Nombre:*</label>
+      <input type="text" name="Nombre" id="Nombre" maxlength="20" required><br> <br>
+
+      <label for="Apellido">Apellido:*</label>
+      <input type="text" name="Apellido" id="Apellido" maxlength="20" required><br> <br>
+
+      <label for="email">Correo electronico:*</label>
       <input type="email" name="email" id="email" required> <br><br>
-      <label for="Telefono">Telefono:</label>
-      <input type="tel" name="Telefono" id="Telefono" ><br> <br>
+
+      <label for="Telefono">Telefono:*</label>
+      <input type="tel" name="Telefono" id="Telefono" required><br> <br>
+
       <label for="FechaLlegada">Fecha de llegada:</label>
       <input type="date" id="FechaLlegada" name="FechaLlegada" min="2025-11-01"> <br><br>
+
       <label for="FechaSalida">Fecha de salida:</label>
-      <input type="date" id="FechaSalida" name="FechaSalida" max="2027-11-01"> <br><br>
+      <input type="date" id="FechaSalida" name="FechaSalida" max="2027-11-01" > <br><br>
+
       <label for="Cantidad">Cantidad de personas:</label>
       <input type="number" name="Cantidad" id="Cantidad" max="6"> <br><br>
+
       <label for="mensaje">Mensaje:</label> <br>
-      <textarea name="mensaje" id="mensaje" minlength="10" maxlength="100"></textarea> <br><br>
+      <textarea name="msj" id="mensaje" minlength="10" maxlength="100"></textarea> <br><br>
+
       <input type="submit" value="Enviar">
     </fieldset>
-
   </form>
   
+      <div id="resultado" style="justify-content: center;"></div> <!--muestra los datos enviados del formulario-->
+      
+    <script>
+ 
+    function validarFormulario() {
 
+    //const formulario1 = document.getElementById("formulario"); //id del formulario
+    const resultado1 = document.getElementById("resultado"); 
 
+    resultado1.innerHTML = "";
+
+      // obtener valores
+      const nombre1 = document.getElementById("Nombre").value.trim();
+      const apellido1 = document.getElementById("Apellido").value.trim();
+      const mail1 = document.getElementById("email").value.trim();
+      const telefono1 = document.getElementById("Telefono").value.trim();
+
+       if (nombre1 === "" || apellido1 === "" || mail1 === "" || telefono1 === "" ) {
+          resultado1.textContent="Completar campos obligatorios(*)";
+          resultado1.style.color = "red";
+          return false;
+      }
+
+      // expresiones regulares
+      const nombreReg = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,20}$/;
+      const apellidoReg = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,20}$/;
+      const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const telefonoReg = /^\+?\d{7,15}$/;
+
+      // validaciones
+      if (!nombreReg.test(nombre1)) {
+          resultado1.textContent="El nombre no es válido,solo debe contener letras";
+          resultado1.style.color = "red";
+          return false;
+      }
+      if (!apellidoReg.test(apellido1)) {
+          resultado1.textContent="El apellido no es válido,solo debe contener letras";
+          resultado1.style.color = "red";
+          return false;
+      }
+
+      if (!emailReg.test(mail1)) {
+          resultado1.textContent="El correo no es válido";
+          resultado1.style.color = "red";
+          return false;
+      }
+
+        if (!telefonoReg.test(telefono1)) {
+          resultado1.textContent="El telefono no es válido";
+          resultado1.style.color = "red";
+          return false;
+      }
+
+      const titulo = document.createElement("h3");
+      titulo.textContent = "Datos enviados:";//Devuelve el contenido de texto de un elemento//
+      resultado1.appendChild(titulo);
+
+      const lista = document.createElement("ul");
+
+            const item1 = document.createElement("li");
+            item1.textContent = "Nombre:"+ nombre1;
+            lista.appendChild(item1);
+
+            const item2 = document.createElement("li");
+            item2.textContent = "Apellido:"+ apellido1;
+             lista.appendChild(item2);
+
+            const item3 = document.createElement("li");
+            item3.textContent = "Mail:"+ mail1;
+            lista.appendChild(item3);
+
+            const item4 = document.createElement("li");
+            item4.textContent = "Telefono:"+ telefono1;
+            lista.appendChild(item4);
+
+            resultado1.appendChild(lista);
+            resultado1.style.color = "green";
+
+            document.getElementById("formulario").reset();
+
+            return false; // evita que se recargue la página
+  }
+  </script>
 </body>
 </html>
