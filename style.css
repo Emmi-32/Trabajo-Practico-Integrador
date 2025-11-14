@@ -55,7 +55,7 @@
       position: sticky; /*movible accesos directos,simil fixed*/
       top: 0; 
       height: 110px;
-      width: 94%;
+      width: 95%;
     }
 
     h2{
@@ -71,6 +71,15 @@
        text-align: center;
     }
 
+    h3{
+       color: rgb(23, 132, 228);
+       text-alrgb(30, 69, 241)er;
+    }
+    h5{
+       color: rgb(241, 151, 16);
+       text-align: center;
+    }
   
+
 
  
